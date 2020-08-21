@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             mc:Ignorable="d"
+             x:Class="AppPan_Panadero.Views.MapaPedidos">
+    <Grid>
+        <maps:Map IsShowingUser="True" x:Name="map" HasZoomEnabled="true" />
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <Button x:Name="btnAceptar" Text="Aceptar pedido" TextColor="White" BackgroundColor="ForestGreen" VerticalOptions="StartAndExpand" Padding="10" Clicked="btnAceptar_Clicked"></Button>
+            <Button x:Name="btnRechazar" Text="Rechazar pedido" TextColor="White" BackgroundColor="Tomato" VerticalOptions="StartAndExpand"  Padding="10" Clicked="btnRechazar_Clicked"></Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>

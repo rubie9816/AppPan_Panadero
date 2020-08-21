@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppPan_Panadero.Views.MenuPrincipal">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Pan.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="RosyBrown" Opacity="0.6"></BoxView>
+            
+            <StackLayout>
+                <Label FontSize="Large" TextColor="White" Text="Bienvenido Paulo, vamo a vender"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblestado" FontSize="Medium" TextColor="White" Grid.Column="0" Text="Estado de venta: Inactivo" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                    <Switch x:Name="SwEstado" Grid.Column="1" IsToggled="false" Toggled="Switch_Toggled" OnColor="Pink" HorizontalOptions="Start"/>
+                </Grid>
+                <Button x:Name="btnPedidos" BackgroundColor="White" TextColor="RosyBrown" FontAttributes="Bold" ImageSource="pedidos.png" FontSize="Medium" Text="Pedidos" Clicked="btnPedidos_Clicked"></Button>
+                <Button x:Name="btnProductos" BackgroundColor="White" TextColor="RosyBrown" FontAttributes="Bold" ImageSource="productos.png" FontSize="Medium" Text="Productos" Clicked="btnProductos_Clicked"></Button>
+                <Button x:Name="btnConfig" BackgroundColor="White" TextColor="RosyBrown" FontAttributes="Bold" ImageSource="config.png" FontSize="Medium" Text="Configuración" Clicked="btnConfig_Clicked"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

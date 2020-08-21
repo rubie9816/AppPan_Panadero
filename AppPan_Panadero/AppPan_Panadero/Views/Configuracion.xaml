@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppPan_Panadero.Views.Configuracion">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Pan.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="RosyBrown" Opacity="0.6"></BoxView>
+
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Text="Configuración" TextColor="White" FontAttributes="Bold" FontSize = "20" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                    <Label Grid.Row="1" TextColor="White" FontSize="10" Text="Realice las modificaciones, a continuación presione el boton Guardar cambios." HorizontalTextAlignment="Center" VerticalTextAlignment="End" />
+                    <StackLayout Grid.Row="2" Padding="30,20" Spacing="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0"/>
+                            <Button Grid.Row="0" Grid.Column="1" Text="Foto"/>
+                        </Grid>
+                        <Label BackgroundColor="RosyBrown" TextColor="White" FontAttributes="Bold" Text="Nombre"></Label>
+                        <Entry  FontSize="10" Placeholder="Nombre" PlaceholderColor="White"></Entry>
+                        <Label BackgroundColor="RosyBrown" TextColor="White" FontAttributes="Bold" Text="Usuario"></Label>
+                        <Entry FontSize="10" Placeholder="Usuario" PlaceholderColor="White" ></Entry>
+                        <Label BackgroundColor="RosyBrown" TextColor="White" FontAttributes="Bold" Text="Contraseña"></Label>
+                        <Entry  FontSize="10" Placeholder="Contraseña" PlaceholderColor="White"  ></Entry>
+                        <Label BackgroundColor="RosyBrown" TextColor="White" FontAttributes="Bold" Text="Nombre de negocio"></Label>
+                        <Entry FontSize="10" Placeholder="Nombre de negocio" PlaceholderColor="White"></Entry>
+
+                        <Button x:Name="btnGuardar" FontSize="15" Text="Guardar cambios" WidthRequest="40" HeightRequest="40" BackgroundColor="White" BorderWidth="10" FontAttributes="Bold" TextColor="DarkSeaGreen" Clicked="btnGuardar_Clicked"></Button>
+                        <Button x:Name="btnCancelar" FontSize="15" Text="Cancelar" WidthRequest="40" HeightRequest="40" BackgroundColor="White" BorderWidth="10" FontAttributes="Bold" TextColor="Tomato"  Clicked="btnCancelar_Clicked"></Button>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
